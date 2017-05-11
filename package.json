@@ -1,0 +1,15 @@
+{
+  "name": "navitia-sdk",
+  "version": "0.1.0",
+  "description": "React Native module for NavitiaSDK iOs & Android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "react-native"
+  ],
+  "author": "",
+  "license": "GPL-3.0"
+}
