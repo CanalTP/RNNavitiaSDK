@@ -1,4 +1,4 @@
-declare module 'navitia-sdk' {
+declare module 'react-native-navitia-sdk' {
     declare export default {
         configuration: NavitiaConfiguration,
         endpoints: NavitiaEndpoints,

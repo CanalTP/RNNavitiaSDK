@@ -1,5 +1,5 @@
 {
-  "name": "navitia-sdk",
+  "name": "react-native-navitia-sdk",
   "version": "0.1.0",
   "description": "React Native module for NavitiaSDK iOs & Android",
   "main": "index.js",
