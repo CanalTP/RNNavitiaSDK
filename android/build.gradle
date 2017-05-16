@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "0.1.0"
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.facebook.react:react-native:+'
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile 'org.kisio.sdk:navitia-sdk:0.1.0'
+}
