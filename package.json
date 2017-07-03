@@ -4,7 +4,7 @@
   "description": "React Native module for NavitiaSDK iOs & Android",
   "main": "index.js",
   "scripts": {
-    "install": "ruby node_modules/react-native-navitia-sdk/tasks/ios.rb",
+    "postinstall": "ruby tasks/ios.rb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

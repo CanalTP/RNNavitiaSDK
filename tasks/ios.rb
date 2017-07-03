@@ -1,15 +1,17 @@
 require 'xcodeproj'
 require 'json'
 
+platform_path = '../../ios'
+
 project_file_name = nil
-project_files = Dir.entries('./ios')
+project_files = Dir.entries(platform_path)
 project_files.to_a.map do |file|
   if File.extname(file) == '.xcodeproj' then
     project_file_name = file
   end
 end
 
-project_path = './ios/' + project_file_name
+project_path = platform_path + '/' + project_file_name
 project = Xcodeproj::Project.open(project_path)
 target = project.targets.first
 
@@ -20,13 +22,13 @@ target.add_file_references([
 
 project.save(project_path)
 
-if not File.exist?('./ios/Podfile') then
-  system "cd ios && pod init"
+if not File.exist?(platform_path + '/Podfile') then
+  system 'cd ' + platform_path + ' && pod init'
 end
 
-File.open('./ios/Podfile', 'a+') do |file|
+File.open(platform_path + '/Podfile', 'a+') do |file|
   file.puts "\r" + "use_frameworks!"
   file.puts "\r" + "pod 'NavitiaSDK', '0.1'"
 end
 
-system "cd ios && pod install"
+system 'cd ' + platform_path + ' && pod install'
