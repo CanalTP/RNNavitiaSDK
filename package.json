@@ -1,15 +1,16 @@
 {
   "name": "react-native-navitia-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native module for NavitiaSDK iOs & Android",
   "main": "index.js",
   "scripts": {
+    "postinstall": "ruby tasks/ios.rb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-component",
     "react-native"
   ],
-  "author": "",
+  "author": "Kisio Digital",
   "license": "GPL-3.0"
 }
